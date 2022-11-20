@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Calculator</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: Arial Black, Helvetica, sans-serif;
+        }
+        .container{
+            margin:50px;
+            padding:1px 38%;
+            width:100%;
+        }
+        h1{
+            
+            Margin :10px;
+            color :black;
+        }
+        body {
+            background-image: url("https://thumbs.dreamstime.com/b/mathematics-abstract-background-made-solid-numbers-closeup-view-162660318.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+        } 
+        table{
+            align-items: center;
+            text-align: center;
+        }
+        .btn, .btn1{
+            width:50px;
+            font-style: oblique;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            background-color:black;
+            height:50px;
+            font-weight: bolder;
+        }
+        .btn1{
+            width:100px;   
+        }
+        #input{
+            width:185px;
+            padding:8px;    
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+<br>
+        <input type="text" id="input" readonly>
+        <br><br>
+        <table>
+            <tr>
+                <td colspan="2"><button class="btn1" onclick="document.getElementById('input').value+=0  ">0</button></td>
+                <td colspan="2"><button class="btn1" onclick="document.getElementById('input').value=''">AC</button></td>
+            
+                
+             </tr>
+            <tr>
+               
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=1">1</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=2">2</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=3">3</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+='*'">*</button></td>
+            </tr>
+            <tr>
+               
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=4">4</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=5">5</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=6">6</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+='+'">+</button></td>
+            </tr>
+            <tr>
+               
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=7">7</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=8">8</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+=9">9</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+='-'">-</button></td>
+            </tr>
+            <tr>
+               
+            
+               
+                 <td colspan="2"><button class="btn1" onclick="calc()">=</button></td>
+                
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+='.'">.</button></td>
+            
+                <td><button class="btn" onclick="document.getElementById('input').value+='/'">/</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    function calc(){
+        document.getElementById('input').value=eval(document.getElementById('input').value);
+    }
+</script>
+</html>
